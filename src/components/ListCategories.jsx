@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate} from 'react-router-dom';
 import { List, Collapse, ListItemButton, ListItemIcon,  ListItemText }  from "@mui/material"
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import ExpandLess from '@mui/icons-material/ExpandLess';
@@ -10,6 +11,7 @@ import CircleIcon from '@mui/icons-material/Circle';
 
 
 const ListCategories = (props) => {
+    const navigate = useNavigate();
     const [open, setOpen] = useState(false);
 
     const handleClick = () => {
@@ -38,7 +40,7 @@ const ListCategories = (props) => {
             </ListItemButton> */}
             {props.subSubject.map((sub) => 
             
-            <ListItemButton sx={{ pl: 4 }}>
+            <ListItemButton onClick={() => {navigate('/flash-card')}} sx={{ pl: 4 }}>
                 <ListItemIcon>
                 <SubdirectoryArrowRight style={{color:"rgba(82, 238, 226, 0.7)", }} />
                 </ListItemIcon>
