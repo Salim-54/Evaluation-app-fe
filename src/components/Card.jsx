@@ -8,6 +8,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 
+
 const FlashCard = () => {
   
   const [flip, setFlip] = useState(false);
@@ -27,13 +28,16 @@ const FlashCard = () => {
         </Typography>
         </Box>
 
-        <Box display={"flex"} alignItems={"center"} flexDirection={"column"} justifyContent={"space-around"} className="back">
+        <Box display={"flex"} alignItems={"center"} flexDirection={"column"} justifyContent={"space-evenly"} className="back">
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           The answer 
         </Typography>
         <Typography textAlign={"center"} variant="h5" component="div">
-          I'll live and die here in Africa💗💗  I'll live and die here in Africa💗💗 I'll live and die here in Africa💗💗
+          I'll live and die here in Africa💗💗  I'll live and die here in Africa💗💗 I'll live and die here in Africa💗💗 
         </Typography>
+        <Button sx={{mt:6}} variant="contained" color="primary">
+          Next Question
+        </Button>
         </Box>
 
       </CardContent>

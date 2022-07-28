@@ -54,8 +54,8 @@ const Questions = () => {
 <Box display={"flex"} alignItems={"center"} justifyContent={"space-around"} my={3} >
             <TextField id="standard-basic" label="Add new question" variant="standard" />
             <Button sx={{bgcolor:"#24c9c2", color:"#fff"}} variant="contained" disableElevation onClick={toggleModal}> 
-              Add question
-          </Button>
+                Add question
+            </Button>
 
             </Box>
 <List sx={{width:"90%"}}>

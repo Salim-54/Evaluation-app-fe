@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useNavigate} from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -18,6 +19,7 @@ const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const NavBar = () => {
+  const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -47,7 +49,7 @@ const NavBar = () => {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            onClick={() => {navigate('/')}}
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -56,6 +58,7 @@ const NavBar = () => {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
+              cursor:"pointer"
             }}
           >
             HOME

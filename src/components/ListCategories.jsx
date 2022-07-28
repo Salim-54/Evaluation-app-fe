@@ -30,14 +30,6 @@ const ListCategories = (props) => {
         </ListItemButton>
         <Collapse in={open} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-            {
-            
-            /* <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon>
-                <StarBorder />
-                </ListItemIcon>
-                <ListItemText primary={props.subSubject} />
-            </ListItemButton> */}
             {props.subSubject.map((sub) => 
             
             <ListItemButton onClick={() => {navigate('/flash-card')}} sx={{ pl: 4 }}>
