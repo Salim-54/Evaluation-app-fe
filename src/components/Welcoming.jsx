@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Routes, Route, useNavigate} from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import ListCategories from '../components/ListCategories'
 import {Stack, Box, List, Typography, Button, Container }  from "@mui/material"
 import Lottie from "lottie-react"
@@ -57,7 +57,7 @@ return (
            Customers hate complexity and love simplicity, viewing it as a form of good customer service. When you make things simple, you create a smooth customer experience.
            </Typography>
            </Box>
-        <Button onClick={() => {navigate('/flash-card')}} disableElevation sx={{marginTop:"50px", color:"white"}} variant="contained">
+        <Button onClick={() => {navigate('/dashboard')}} disableElevation sx={{marginTop:"50px", color:"white"}} variant="contained">
           Tap to Create yours
         </Button>
            </Box>
