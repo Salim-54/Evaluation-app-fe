@@ -1,43 +1,21 @@
 import React, { useState } from "react";
 import { useNavigate} from 'react-router-dom';
+import { useQuery, gql } from '@apollo/client';
 import ListCategories from '../components/ListCategories';
+import QuizList from "./QuizList";
 import {Stack, Box, List, Typography, Button, ListSubheader, Paper }  from "@mui/material";
 import Lottie from "lottie-react";
 import bgog from "../assets/bgog.json";
 
+
     const style = {
         height: 600,
         };
-
-    const subjects = {
-       data: [
-           {
-            name: "English",
-            subs:[
-                "gramma",
-                "speakings"
-            ]
-           },
-           {
-            name: "Engineering",
-            subs:[
-                "Robotics",
-                "Mechatronics"
-            ]
-           },
-           {
-            name: "Development",
-            subs:[
-                "TypeScript",
-                "GraphQL"
-            ]
-           },
-
-        ]
-    };
-    
+  
 const Welcoming = () => {
     const navigate = useNavigate();
+
+
 return (
     <Box>
       <Box height={"75vh"} width={"100%"} position={"relative"} display={"flex"} alignItems={"center"} justifyContent={"center"}>
@@ -57,19 +35,15 @@ return (
            Customers hate complexity and love simplicity, viewing it as a form of good customer service. When you make things simple, you create a smooth customer experience.
            </Typography>
            </Box>
-        <Button onClick={() => {navigate('/dashboard')}} disableElevation sx={{marginTop:"50px", color:"white"}} variant="contained">
+        <Button onClick={() => {navigate('/dashboard');}} disableElevation sx={{marginTop:"50px", color:"white"}} variant="contained">
           Tap to Create yours
         </Button>
            </Box>
            <Box flex={1} sx={{p:"10%"}} >
+               
            <Paper  sx={{maxHeight: 400, overflow: 'auto', bgcolor:"rgba(0, 0, 0, 0)",}}>
-            <List>
-
-                  <ListSubheader disableSticky sx={{bgcolor:"rgba(0, 0, 0, 0)", fontSize:"18px"}} component="h3">The available Quizes</ListSubheader>
-
-                {subjects.data.map((item) => <ListCategories key={item.name}  subject={item.name} subSubject={item.subs}/>)}
-
-            </List>
+            
+            <QuizList/>
             </Paper>
         </Box>
         </Stack>

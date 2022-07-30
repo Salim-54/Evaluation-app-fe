@@ -41,7 +41,7 @@ const ListCategories = (props) => {
             </ListItemButton> */}
             <Box ml={10} maxWidth={400} display={"flex"} flexDirection={"column"} alignItems={"center"} justifyContent={"center"}>
 
-                <Typography variant="body1" color="initial">Hi this is all about this quiz and I promise is not the best quiz app in the world Hi this is all about this quiz and I promise is not the best quiz app in the world Hi this is all about this quiz and I promise is not the best quiz app in the world</Typography>
+                <Typography variant="body1" color="initial">{props.discription}</Typography>
 
             <Button variant="outlined" onClick={() => {navigate('/flash-card')}} endIcon={<DoubleArrowIcon />}>
                 Start

@@ -46,7 +46,7 @@ const Quiz= () => {
           aria-label=""
           sx={{position:"absolute", zIndex:"5",bottom:"50px", right:"50px"}}
           onClick={()=>{
-            console.log(data);;
+            // console.log(data);;
             navigate("/");}}
         >
           <HomeIcon />
