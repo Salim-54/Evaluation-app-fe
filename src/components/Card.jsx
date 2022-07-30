@@ -33,7 +33,7 @@ const FlashCard = () => {
           The answer 
         </Typography>
         <Typography textAlign={"center"} variant="h5" component="div">
-          I'll live and die here in Africa💗💗  I'll live and die here in Africa💗💗 I'll live and die here in Africa💗💗 
+          I'll live and die here!💗💗  I'll live and die here!💗💗 I'll live and die here!💗💗 
         </Typography>
         <Button sx={{mt:6}} variant="contained" color="primary">
           Next Question
