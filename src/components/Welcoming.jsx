@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate} from 'react-router-dom';
-import ListCategories from '../components/ListCategories'
-import {Stack, Box, List, Typography, Button, Container }  from "@mui/material"
-import Lottie from "lottie-react"
+import ListCategories from '../components/ListCategories';
+import {Stack, Box, List, Typography, Button, ListSubheader, Paper }  from "@mui/material";
+import Lottie from "lottie-react";
 import bgog from "../assets/bgog.json";
 
     const style = {
@@ -62,10 +62,15 @@ return (
         </Button>
            </Box>
            <Box flex={1} sx={{p:"10%"}} >
+           <Paper  sx={{maxHeight: 400, overflow: 'auto', bgcolor:"rgba(0, 0, 0, 0)",}}>
             <List>
+
+                  <ListSubheader disableSticky sx={{bgcolor:"rgba(0, 0, 0, 0)", fontSize:"18px"}} component="h3">The available Quizes</ListSubheader>
+
                 {subjects.data.map((item) => <ListCategories key={item.name}  subject={item.name} subSubject={item.subs}/>)}
 
             </List>
+            </Paper>
         </Box>
         </Stack>
         </Box>
